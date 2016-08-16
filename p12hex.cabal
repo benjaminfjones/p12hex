@@ -1,0 +1,27 @@
+name:                p12hex
+version:             0.1.0.0
+synopsis:            PIC 12F Hex Format Disassembler
+license:             BSD3
+license-file:        LICENSE
+author:              Benjamin Jones
+maintainer:          benjaminfjones@gmail.com
+category:            System
+build-type:          Simple
+extra-source-files:  ChangeLog.md, README.md
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     HexRec
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       base >=4.8 && <4.9
+                     , vector
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable p12dasm
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  build-depends:       base >=4.8 && <4.9
+                     , p12hex
+  default-language:    Haskell2010
